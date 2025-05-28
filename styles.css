@@ -4,8 +4,8 @@ body {
   font-family: "Inter", Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
-  color: #222;
+  background: #fff;
+  color: #10285c; /* Changed to dark navy blue */
 }
 
 h1,
@@ -18,20 +18,56 @@ h6 {
   font-weight: 700;
   margin-top: 1.5em;
   margin-bottom: 0.5em;
+  color: #10285c; /* Changed to dark navy blue */
 }
 
 p {
   margin: 0 0 1em 0;
   line-height: 1.6;
+  color: #10285c; /* Changed to dark navy blue */
 }
 
 a {
-  color: #2563eb;
+  color: #10285c;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+/* Grid layout classes */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem 2rem; /* Increased left/right padding for space from edges */
+  box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+}
+
+.grid-item {
+  display: block;
+  background: #e6f0fa; /* Light blue background */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(16, 40, 92, 0.08);
+  padding: 1.5rem;
+  color: #10285c;
+  text-decoration: none;
+  transition: box-shadow 0.2s;
+}
+
+.grid-item:hover {
+  box-shadow: 0 4px 16px rgba(16, 40, 92, 0.16);
+  text-decoration: none;
+}
+
+/* 3 columns for tablets */
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* Center text for mobile devices */
@@ -45,5 +81,65 @@ a:hover {
   h6,
   p {
     text-align: center;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+header h1 {
+  text-align: center;
+}
+
+.info-row {
+  display: flex;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.info-col {
+  flex: 1;
+  min-width: 0;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-hours {
+  background: #10285c;
+  color: #fff;
+}
+
+.info-hours h2,
+.info-hours ul,
+.info-hours li {
+  color: #fff;
+}
+
+.info-map {
+  background: #e6f0fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(16, 40, 92, 0.08);
+}
+
+/* Responsive: stack columns on mobile */
+@media (max-width: 800px) {
+  .info-row {
+    flex-direction: column;
+    width: 100%;
+  }
+  .info-col {
+    padding: 1rem;
   }
 }
