@@ -16,8 +16,6 @@ h5,
 h6 {
   font-family: "Inter", Arial, sans-serif;
   font-weight: 700;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
   color: #10285c; /* Changed to dark navy blue */
 }
 
@@ -138,8 +136,8 @@ header h1 {
 
 @media (min-width: 1025px) {
   .info-hours {
-    align-items: flex-start;
-    text-align: left;
+    align-items: center;
+    text-align: center;
     justify-content: flex-start;
     padding-top: 3rem;
   }
@@ -147,7 +145,7 @@ header h1 {
     font-size: 2.5rem;
     margin-top: 0.5em;
     margin-bottom: 0.75em;
-    align-self: flex-start;
+    align-self: center;
   }
   .info-hours ul,
   .info-hours li {
